@@ -33,6 +33,7 @@ idna==2.6
 incremental==16.10.1
 isort==4.3.21
 itsdangerous==1.1.0
+IPython
 Jinja2==2.11.0
 jira==2.0.0
 jsonpatch==1.16

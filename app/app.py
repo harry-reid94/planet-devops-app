@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from model_tutorial import TutorialForm, TutorialModel
+from model_consultation import ConsultationForm, ConsultationModel
 from flask_sqlalchemy import SQLAlchemy
 from IPython.display import display, HTML
 from datetime import date
@@ -46,6 +47,7 @@ def tutorial_create():
         tutorial.aws = form.aws.data
         tutorial.github = form.github.data
         tutorial.created_date = date.today()
+        tutorial.wide_img = form.wide_img.data
         print(tutorial.created_date)
 
         db.session.add(tutorial)
@@ -73,3 +75,4 @@ def consultation():
     return render_template('consultation.html')
 
 app.run()
+# %%

@@ -6,7 +6,7 @@ c = conn.cursor()
 
 #add new release
 
-c.execute("ALTER TABLE tutorial_model DROP COLUMN 'created_date';")
+c.execute("ALTER TABLE tutorial_model ADD 'wide_img' INTEGER(1);")
 
 #'ansible' INTEGER(1), 'docker' INTEGER(1), 'kubernetes' INTEGER(1), 'rancher' NUMBER, 'jenkins' INTEGER(1), 'aws' INTEGER(1), 'github' INTEGER(1);")
 

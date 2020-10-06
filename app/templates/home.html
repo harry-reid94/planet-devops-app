@@ -7,9 +7,9 @@
 
         <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="/static/css/main.css">
+        <!--
         <link rel="stylesheet" href="/static/css/spaceship.css">
-        <link rel="stylesheet" href="/static/css/pygments.css">
-        <link rel="stylesheet" href="/static/css/pygments_error.css">
+        -->        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
         
     
         
@@ -21,10 +21,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     </head>
-    <body style="padding-right: 0%;">
+    <script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"66ed0d54cbee48a8",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>    <body style="background-color: #F9F9F9;">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
             <a class="navbar-brand" href="/">
-              <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀Planet<span class="emph">DevOps</span></h3>
+              <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀planet<span class="lightest-blue">DevOps</span></h3>
               <!--<img class="nav-logo" src="/static/images/logo.png" alt="devopsnation.io"/> -->
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -33,7 +33,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
               <!-- left -->
-              <ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav mr-auto navbar-pad">
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="/tutorials/">Tutorials</a>
                   </li>
@@ -43,133 +43,90 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/consultation/">Consultation</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/reading/">Reading</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Courses</a>
-                  </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    More
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/support/">Support and Consulting</a>
-                    <a class="dropdown-item" href="/test-driven-development/">What is Test-Driven Development?</a>
-                    <a class="dropdown-item" href="/testimonials/">Testimonials</a>
-                    <a class="dropdown-item" href="/opensource/">Open Source Donations</a>
-                    <a class="dropdown-item" href="/join-testdriven/">Write for TestDriven.io</a>
-                  </div>
-                </li>
+
               </ul>
-              <!-- right - NOT included in hamburger menu -->
               <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <span class="ml-lg-auto d-none d-lg-flex">
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://twitter.com/testdrivenio"
-                      data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="nav-link" href="https://twitter.com/planetdevopsio"><i class="fab fa-twitter"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://github.com/testdrivenio"
-                      data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
+                    <a class="nav-link" href="https://slack.com/planetdevopsio"><i class="fab fa-slack"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
+                    <a class="nav-link" href="https://www.facebook.com/PlanetDevops-108065184396117"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://linkedin.com/planetdevops"><i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li class="nav-item" style="padding-right: 20px;">
+                    <a class="nav-link" href="https://github.com/planetdevopsio"><i class="fab fa-github"></i></a>
                   </li>
                 </span>
                 
                 <li class="nav-item nav-right-btn">
                   <a
-                    class="btn btn-primary"
-                    href="/accounts/login/?next=/courses/"
-                    data-a-nav-signin>Sign In</a>
-                  <a
-                    class="btn btn-brand1"
-                    href="/accounts/signup/?next=/courses/"
-                    data-a-nav-signup>Sign Up</a>
+                    class="btn btn-danger" style="pointer-events: none; background-color: rgb(144, 55, 73); border-color: rgb(144, 55, 73);"
+                    href="/">Sign In</a>
                 </li>
                 
               </ul>
-              <!-- right - included in hamburger menu -->
-              <ul class="navbar-nav d-md-none">
-                
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/login/"
-                    data-a-nav-signin>Sign In</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/signup/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
+
+              
             </div>
         </nav>
 
           
-        <header class="hero alt-btns no-effect wide home-background-image" style="padding-top: 80px">
+        <header class="title col-12 home-background-image">
             <div class="container"> 
-            <div class="col-12 col-md-10 col-lg-8">
-                <h1>Your home of <span class="emph">DevOps</span><span style="color: rgb(160, 7, 7);">.</span></h1>
-                
-                <p class="lead">Our in-depth tutorials teach you how apply industry standard DevOps practices and principles to real-world problems using the latest tools, technologies, and frameworks. We also like to blog.</p>
-                <p class="lead"></p>
-
-                <div class="actions-row">
-                <a href="/courses/" class="btn btn-hollow light-blue">View Tutorials</a>
-                <a href="/test-driven-development/" class="action-link light-blue">Learn about DevOps</a>
+            <div class="col-12">
+                <h1 class="header-h1">Your home of <span class="lightest-blue">DevOps</span><span class="dark-red">.</span></h1>
+                <h3 class="sub-title">Our step-by-step tutorials teach you how apply industry standard DevOps practices and principles to real-world problems using the latest tools, technologies, and frameworks. We also like to blog.</h3>
+                <div class="home-actions">
+                  <br>
+                  <a href="/tutorials/" class="btn btn-outline-light bolder btn-padding pad-right">View Tutorials</a>
+                  <a href="/articles/" class="lightest-blue-link bolder underline">Read about DevOps  ></a>
                 </div>
             </div>
             </div>
-        </header>          
+        </header>       
+           
           <div class="row" style="padding: 40px;">
             <div class="col">
               <div class="card">
-                <div class="card-header">
-                  <h4 style="color: white;">Tutorials</h4>
+                <div class="card-header dark-background">
+                  <h4>Tutorials</h4>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text">Planet DevOps offers a wide range of free tutorials, from installing and configuring Docker, to running your first serverless Flask application.</p>
-                  <a href="/tutorials/" class="btn btn-hollow light-blue">View Tutorials | 🚀</a>
+                  <a href="/tutorials/" class="btn btn-outline-dark">View Tutorials | 🚀</a>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <div class="card-header">
-                  <h4 style="color: white;">Articles</h4>
+                <div class="card-header dark-background">
+                  <h4>Articles</h4>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text">"Tell them what you are going to tell them, tell them, then tell them what you told them." - Aristotle</p>
                   <br>
-                  <a href="/articles/" class="btn btn-hollow light-blue">Visit Blog | 🚀</a>
+                  <a href="/articles/" class="btn btn-outline-dark">Visit Blog | 🚀</a>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <div class="card-header">
-                  <h4 style="color: white;">Consultation</h4>
+                <div class="card-header dark-background">
+                  <h4>Consultation</h4>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text">Get bespoke, tailored professional advice on how to implement DevOps practices into your business to maximize profits.</p>
                   <br>
-                  <a href="/consultation/" class="btn btn-hollow light-blue">More Info | 🚀</a>
+                  <a href="/consultation/" class="btn btn-outline-dark">More Info | 🚀</a>
                 </div>
               </div>
             </div>
@@ -177,16 +134,17 @@
             <br>
 
             <div class="card text-center" style="margin-right: 40px; margin-left: 40px">
-              <div class="card-header">
+              <div class="card-header dark-background">
                 <b>Tech Stack</b>
               </div>
               <div class="card-body">
                 <h5 class="card-title">A look at the tools we base our content around</h5>
                 <br>
+
                 <div class="row">
                   <div class="col">
                     <a  href="https://www.python.org/">
-                      <img class="home-logos" src="/static/images/logos/Python.png"/>
+                      <img loading="lazy" class="home-logos" src="/static/images/logos/Python.png"/>
                     </a>
                     <h6>Python</h6>
                     
@@ -223,9 +181,9 @@
                     </div>
                   <div class="col">
                     <a  href="https://www.jenkins.io/">
-                      <img class="home-logos" src="/static/images/logos/Jenkins.png"/>
+                      <img class="home-logos" src="/static/images/logos/CircleCI.png"/>
                     </a>
-                    <h6>Jenkins</h6>
+                    <h6>CircleCI</h6>
                   </div>
                   <div class="col">
                     <a  href="https://aws.amazon.com/">
@@ -245,61 +203,32 @@
             </div>
             <br>
 
-          
-          <div class="signup-ribbon" role="banner" style="margin-right: 40px; margin-left: 40px;">
             <div class="container">
-              <div class="row justify-content-center">
+              <div class="row justify-content-center vert-space">
                 <div class="col-12 col-md-8">
-                  <header class="signup-ribbon-header">
-                    <h2 class="signup-ribbon-heading">Stay Up-to-Date!</h2>
-                    <p class="lead">Join our mailing list to be notified about new tutorials, articles and other content.</p>
+                    <h2 style="text-align: center;">Stay Up-to-Date!</h2>
+                    <p style="text-align: center;">Join our mailing list to be notified about new tutorials, articles and more.</p>
                   </header>
-          
-                  <form action="//testdriven.us17.list-manage.com/subscribe/post?u=bea5ac664532063fe8aa8d6a2&amp;id=eddaf58c2a"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="signup-ribbon-form validate" target="_blank" novalidate>
-                    <div class="signup-ribbon-row">
-                      <input placeholder="Enter your email" id="first_name" type="email" name="EMAIL" class="form-control">
-                      <button
-                        class="btn btn-success btn-hollow"
-                        type="submit"
-                        name="action"
-                        data-a-newsletter-sub>Subscribe</button>
+                  <div class="d-flex justify-content-center">
+                      <input placeholder="Enter your email" class="form-control subscribe-input">
+                      <button class="btn btn-success" type="submit">Subscribe</button>
                     </div>
-                  </form>
                 </div>
               </div>
             </div>
-          </div>
-          
-          
-          
-          
-          
-              <!-- Footer -->
-              
-                <footer class="footer text-center">
-            <div class="container">
-              <hr>
-              <small>
-                <p>
-                  <span>&copy; Copyright 2017 - 2020 DevOps Planet</span>.
-                  <br>
-                  <span>Developed by </span>
-                  <a href="http://mherman.org/">Hary Reid</a>.
-                <p>
-              </small>
-              <div>
-                <a
-                  href="https://twitter.com/testdrivenio?ref_src=twsrc%5Etfw"
-                  class="twitter-follow-button"
-                  data-show-count="false">
-                  Follow @devopsplanet
-                </a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
-            </div>
-          </footer> 
+              <footer class="footer text-center">
+                <div class="container">
+                  <hr>
+                  <small>
+                    <p>
+                      <span>&copy; Copyright 2020 - PlanetDevOps</span>.
+                      <br>
+                      <span>Developed by </span>
+                      <a href="https://www.linkedin.com/in/hreid08/">Harry Reid</a>.
+                    <p>
+                  </small>
+    
+              </footer>
           
               
           
@@ -314,57 +243,6 @@
           <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
           <script src="/static/js/glider-init.4b9f36aaa51b.js"></script>
           
-          
-              <!-- Feedback Form -->
-              <script src="/static/js/feedback.ac671e0620a0.js"></script>
-              <script>
-            var generated_csrf_token = 'ju38TDpJB0aqZOr6PB1sBariUKDv8lnnmN1ZJ3nLASfxIux2cckn9xqTkFGewPdQ';
-          </script>
-          
-          <div class="feedback-btn">
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
-          </div>
-          
-          <!-- Feedback Modal -->
-          <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="feedbackModalTitle">Send Us Feedback</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form class="send-feedback-form">
-                    <div class="form-group">
-                      <input type="email" class="form-control email-input" placeholder="Your email address" required>
-                    </div>
-                    <div class="form-group">
-                      <textarea class="form-control feedback-input" rows="5" placeholder="Send us your feedback or report an issue. Please provide as much detail as possible. Thank you." required></textarea>
-                    </div>
-                    <div class="form-group" style="margin-bottom:2px">
-                      <button type="submit" class="btn btn-primary btn btn-block">Send</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aaria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <div class="text-center">
-                    <br><h4 class="thankyou-message"></h4><br>
-                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" style="margin-bottom: 15px;">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           
             </body>
           </html>

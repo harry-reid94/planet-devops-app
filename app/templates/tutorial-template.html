@@ -25,103 +25,70 @@
 
 
     </head>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="/">
-              <img class="nav-logo" alt="devopsnation.io" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-              aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-              <!-- left -->
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Artcles</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="/courses/">Tutorials</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/bundles/">Consultation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Reading</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Events</a>
-                  </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    More
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/support/">Support and Consulting</a>
-                    <a class="dropdown-item" href="/test-driven-development/">What is Test-Driven Development?</a>
-                    <a class="dropdown-item" href="/testimonials/">Testimonials</a>
-                    <a class="dropdown-item" href="/opensource/">Open Source Donations</a>
-                    <a class="dropdown-item" href="/join-testdriven/">Write for TestDriven.io</a>
-                  </div>
-                </li>
-              </ul>
-              <!-- right - NOT included in hamburger menu -->
-              <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <span class="ml-lg-auto d-none d-lg-flex">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://twitter.com/testdrivenio"
-                      data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://github.com/testdrivenio"
-                      data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
-                  </li>
-                </span>
-                
-                <li class="nav-item nav-right-btn">
-                  <a
-                    class="btn btn-primary"
-                    href="/accounts/login/?next=/courses/"
-                    data-a-nav-signin>Sign In</a>
-                  <a
-                    class="btn btn-brand1"
-                    href="/accounts/signup/?next=/courses/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
-              <!-- right - included in hamburger menu -->
-              <ul class="navbar-nav d-md-none">
-                
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/login/"
-                    data-a-nav-signin>Sign In</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/signup/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
-            </div>
-        </nav>
+    <body style="background-color: #F9F9F9;">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="/">
+          <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀Planet<span class="emph">DevOps</span></h3>
+          <!--<img class="nav-logo" src="/static/images/logo.png" alt="devopsnation.io"/> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <!-- left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/tutorials/">Tutorials</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/consultation/">Consultation</a>
+            </li>
+
+          </ul>
+          <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <span class="ml-lg-auto d-none d-lg-flex">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://twitter.com/planetdevopsio"
+                  data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/planetdevopsio"
+                  data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
+              </li>
+            </span>
+            
+            <li class="nav-item nav-right-btn">
+              <a
+                class="btn btn-primary" style="pointer-events: none;"
+                href="/accounts/login/?next=/"
+                data-a-nav-signin>Sign In</a>
+              <a
+                class="btn btn-brand1" style="pointer-events: none;"
+                href="/accounts/signup/?next=/"
+                data-a-nav-signup>Sign Up</a>
+            </li>
+            
+          </ul>
+
+          
+        </div>
+    </nav>
         <header class="hero alt-btns no-effect wide tutorial-background-image" style="padding-top: 80px; padding-bottom: 15px;">
           <div class="container"> 
             <div class="col-12 col-md-10 col-lg-8">
               <div class="header-h1"><span class="emph">Tutorials</span>.</div>
-                <div class="header-h2" style="color: white;">{{tutorial.title}}</div>
+                <div class="header-h1" style="color: white;">{{tutorial.title}}</div>
             </div>
 
           </div>
@@ -129,26 +96,17 @@
       <div data-spy="scroll" data-target="#toc" class="container" style="padding-top: 0px;">
         <div class="row">
           <div class="col-3" style="padding-top: 10px;">
+            <!--
             <a style="color: black; font-weight: bold;" href="/tutorials">
-              <h6><  Back to All Tutorials</h6>
+              <h5><  Back to All Tutorials</h5>
             </a>
+            -->
           </div>
-          <div class="col-9" style="padding-top: 10px;">
-              <!-- AddToAny BEGIN -->
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-              <a class="a2a_button_facebook"></a>
-              <a class="a2a_button_twitter"></a>
-              <a class="a2a_button_email"></a>
-              <a class="a2a_button_linkedin"></a>
-              <a class="a2a_button_reddit"></a>
-              <a class="a2a_button_google_gmail"></a>
-              </div>
-              <script async src="https://static.addtoany.com/menu/page.js"></script>
-              <!-- AddToAny END -->
+          <div class="col-9">
           </div>
         </div>
           <div class="row">
-              <div class="col-3" style="padding-top: 10px;">
+              <div class="col-2" style="padding-top: 10px;">
                   <div class="card">
                       <div class="card-header text-center">
                          <b>Tools Used</b> 
@@ -157,19 +115,42 @@
                     </div>
                   </div>
 
+                  <!--
                   <nav style="padding-top: 0px;" id="toc" data-toggle="toc" class="card sticky-top">
         
                 </nav> 
-                
+                -->
               </div>
-              
-              
-              <div class="col-9">
 
+              <div class="col-9"  style="padding-top: 10px;">
                 <span>{{content}}</span>
-                {{tutorial.content}}
-                
+                <!-- The text field -->
              </div>
+             <div class="col-1" style="padding-top: 10px; position:sticky">
+               <ul class="social-media-ul" style="position:sticky; position: -webkit-sticky; top: 90px">
+                 <li class="social-media-li">
+                  <a href="https://github.com/">
+                    <img class="social-media-logos" src="/static/images/social-media/linkedin.png"/>
+                  </a>
+                 </li>
+                 <li class="social-media-li">
+                  <a href="https://github.com/">
+                    <img class="social-media-logos" src="/static/images/social-media/twitter.png"/>
+                  </a>
+                 </li>
+                 <li class="social-media-li">
+                  <a href="https://github.com/">
+                    <img class="social-media-logos" src="/static/images/social-media/fb.png"/>
+                  </a>
+                 </li>
+                 <li class="social-media-li">
+                  <a href="https://github.com/">
+                    <img class="social-media-logos" src="/static/images/social-media/slack.png"/>
+                  </a>
+                 </li>
+               </ul>
+             </div>
+
              
           </div>    
          
@@ -183,18 +164,18 @@
         <!-- Footer -->
               
         <footer class="footer text-center">
-            <div class="container">
-              <hr>
-              <small>
-                <p>
-                  <span>&copy; Copyright 2020 - 2020 DevOps Nation</span>.
-                  <br>
-                  <span>Developed by </span>
-                  <a href="http://mherman.org/">Hary Reid</a>.
-                <p>
-              </small>
+          <div class="container">
+            <hr>
+            <small>
+              <p>
+                <span>&copy; Copyright 2020 - 2020 PlanetDevops</span>.
+                <br>
+                <span>Developed by </span>
+                <a href="https://www.linkedin.com/in/hreid08/">Hary Reid</a>.
+              <p>
+            </small>
 
-          </footer>
+        </footer>
 
           Subscribe to our weekly newsletter
 
@@ -258,4 +239,23 @@
 
 
   const python = '{tutorial.python}}';
+</script>
+
+<script>
+  function copy(elem) {
+  const wordNode = elem.previousSibling;
+
+  const range = document.createRange();
+  range.setStart(wordNode, 0);
+  range.setEnd(elem, 0);
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  var currentFocus = document.activeElement;
+
+  document.execCommand('copy');
+  selection.removeAllRanges();
+  currentFocus.focus();
+}
 </script>

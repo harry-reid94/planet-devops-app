@@ -21,98 +21,65 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="/">
-              <img class="nav-logo" alt="devopsnation.io" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-              aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-              <!-- left -->
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Artcles</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="/courses/">Tutorials</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/bundles/">Consultation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Reading</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Events</a>
-                  </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    More
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/support/">Support and Consulting</a>
-                    <a class="dropdown-item" href="/test-driven-development/">What is Test-Driven Development?</a>
-                    <a class="dropdown-item" href="/testimonials/">Testimonials</a>
-                    <a class="dropdown-item" href="/opensource/">Open Source Donations</a>
-                    <a class="dropdown-item" href="/join-testdriven/">Write for TestDriven.io</a>
-                  </div>
-                </li>
-              </ul>
-              <!-- right - NOT included in hamburger menu -->
-              <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <span class="ml-lg-auto d-none d-lg-flex">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://twitter.com/testdrivenio"
-                      data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://github.com/testdrivenio"
-                      data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
-                  </li>
-                </span>
-                
-                <li class="nav-item nav-right-btn">
-                  <a
-                    class="btn btn-primary"
-                    href="/accounts/login/?next=/courses/"
-                    data-a-nav-signin>Sign In</a>
-                  <a
-                    class="btn btn-brand1"
-                    href="/accounts/signup/?next=/courses/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
-              <!-- right - included in hamburger menu -->
-              <ul class="navbar-nav d-md-none">
-                
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/login/"
-                    data-a-nav-signin>Sign In</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/signup/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
-            </div>
-        </nav>
+    <body style="background-color: #F9F9F9;">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="/">
+          <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀Planet<span class="emph">DevOps</span></h3>
+          <!--<img class="nav-logo" src="/static/images/logo.png" alt="devopsnation.io"/> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <!-- left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/tutorials/">Tutorials</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/consultation/">Consultation</a>
+            </li>
+
+          </ul>
+          <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <span class="ml-lg-auto d-none d-lg-flex">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://twitter.com/planetdevopsio"
+                  data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/planetdevopsio"
+                  data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
+              </li>
+            </span>
+            
+            <li class="nav-item nav-right-btn">
+              <a
+                class="btn btn-primary" style="pointer-events: none;"
+                href="/accounts/login/?next=/"
+                data-a-nav-signin>Sign In</a>
+              <a
+                class="btn btn-brand1" style="pointer-events: none;"
+                href="/accounts/signup/?next=/"
+                data-a-nav-signup>Sign Up</a>
+            </li>
+            
+          </ul>
+
+          
+        </div>
+    </nav>
         <header class="hero alt-btns no-effect wide tutorial-background-image" style="padding-top: 80px; padding-bottom: 15px;">
           <div class="container"> 
             <div class="col-12 col-md-10 col-lg-8">
@@ -142,13 +109,30 @@
           </div>
       </header>    
       <div class="container">
+        <br>
+            <br>
+            <button onClick="populateTextBox('h1')">h1</button>
+            <button onClick="populateTextBox('h2')">h2</button>
+            <button onClick="populateTextBox('h3')">h3</button>
+            <button onClick="populateTextBox('paragraph')">paragraph</button>
+            <button onClick="populateTextBox('code')">code</button>
+            <button onClick="populateTextBox('image')">image</button>
+            <button onClick="populateTextBox('link')">link</button>
+            <button onClick="populateTextBox('bold')">bold</button>
+            <button onClick="populateTextBox('learning outcomes')">learning outcomes</button>
           <form method="post">
+
           <h5>Title:</h5>
             {{form.title}}
             <h5>Tag:</h5>
             {{form.tag}}
+            
+            <br>
+            <br>
             <h5>Content:</h5>
             {{form.content(class_="tutorial-content")}}
+            <br>
+            <br>
             <h6>Python:</h6>
             {{form.python}}
             <h6>Linux:</h6>
@@ -165,26 +149,67 @@
             {{form.aws}}
             <h6>Github:</h6>
             {{form.github}}
+            <h6>Wide Image:</h6>
+            {{form.wide_img}}
 
             <button  value="Submit" >Submit</button>
 
         </form>
 
       </div>
+      <div id="test"></div>
         
 
         <!-- Footer -->
               
         <footer class="footer text-center">
-            <div class="container">
-              <hr>
-              <small>
-                <p>
-                  <span>&copy; Copyright 2020 - 2020 DevOps Nation</span>.
-                  <br>
-                  <span>Developed by </span>
-                  <a href="http://mherman.org/">Hary Reid</a>.
-                <p>
-              </small>
+          <div class="container">
+            <hr>
+            <small>
+              <p>
+                <span>&copy; Copyright 2020 - 2020 PlanetDevops</span>.
+                <br>
+                <span>Developed by </span>
+                <a href="https://www.linkedin.com/in/hreid08/">Hary Reid</a>.
+              <p>
+            </small>
 
-          </footer>
+        </footer>
+
+<script>
+  function populateTextBox(type) {
+    if(type == 'h1'){
+      var div = document.getElementById('test');
+      div.innerHTML += 'Extra stuff'; 
+      document.getElementById("content").value += '<h1></h1>';
+    }
+    else if(type == 'h2'){
+      document.getElementById("content").value += '<h2></h2>';
+    }
+    else if(type == 'h3'){
+      document.getElementById("content").value += '<h3></h3>';
+    }
+    else if(type == 'paragraph'){
+      document.getElementById("content").value += '<p></p>';
+    }
+    else if(type == 'code'){
+      document.getElementById("content").value += '<div class="col-9"><div class="code-single-div"><code class="code-single-code"></code><input class="code-single-copy" type="image" value="" onClick="copy(this)" src="/static/images/copy.png"></div>';
+    }
+    else if(type == 'image'){
+      document.getElementById("content").value += '<img class="tutorial-content" src="/static/images/tutorial-images/">';
+    }
+    else if(type == 'learning outcomes'){
+      document.getElementById("content").value += '<div class="card"><div class="card-header"><b>Learning Outcomes</b></div><div class="card-body"><ul><li></li><li></li><li></li></ul></div></div>';
+    }
+    else if(type == 'link'){
+      document.getElementById("content").value += '<a href=""></a>';
+    }
+    else if(type == 'bold'){
+      document.getElementById("content").value += '<b></b>';
+    }
+  }
+
+
+
+  
+</script>

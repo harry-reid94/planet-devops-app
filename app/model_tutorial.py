@@ -22,6 +22,7 @@ class TutorialModel(db.Model):
     aws = db.Column(db.Integer)
     github = db.Column(db.Integer)
     created_date = db.Column(db.Date)
+    wide_img = db.Column(db.Integer)
 
 class TutorialForm(Form):
     tag = StringField('Tag')
@@ -36,6 +37,7 @@ class TutorialForm(Form):
     jenkins = BooleanField('jenkins?')
     aws = BooleanField('aws?')
     github = BooleanField('github?')
+    wide_img = BooleanField('wide img?')
     '''
     title    = StringField(u'Title', [validators.required(), validators.length(max=100)])
     subtitle = StringField('SubTitle', widget = TextArea())

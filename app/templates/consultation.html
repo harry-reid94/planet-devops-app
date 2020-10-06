@@ -21,108 +21,75 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="/">
-              <img class="nav-logo" alt="devopsnation.io" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-              aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-              <!-- left -->
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Artcles</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="/courses/">Tutorials</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/bundles/">Consultation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Reading</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/bundles/">Events</a>
-                  </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    More
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/support/">Support and Consulting</a>
-                    <a class="dropdown-item" href="/test-driven-development/">What is Test-Driven Development?</a>
-                    <a class="dropdown-item" href="/testimonials/">Testimonials</a>
-                    <a class="dropdown-item" href="/opensource/">Open Source Donations</a>
-                    <a class="dropdown-item" href="/join-testdriven/">Write for TestDriven.io</a>
-                  </div>
-                </li>
-              </ul>
-              <!-- right - NOT included in hamburger menu -->
-              <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <span class="ml-lg-auto d-none d-lg-flex">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://twitter.com/testdrivenio"
-                      data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://github.com/testdrivenio"
-                      data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
-                  </li>
-                </span>
-                
-                <li class="nav-item nav-right-btn">
-                  <a
-                    class="btn btn-primary"
-                    href="/accounts/login/?next=/courses/"
-                    data-a-nav-signin>Sign In</a>
-                  <a
-                    class="btn btn-brand1"
-                    href="/accounts/signup/?next=/courses/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
-              <!-- right - included in hamburger menu -->
-              <ul class="navbar-nav d-md-none">
-                
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/login/"
-                    data-a-nav-signin>Sign In</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/accounts/signup/"
-                    data-a-nav-signup>Sign Up</a>
-                </li>
-                
-              </ul>
-            </div>
-        </nav>
+    <body style="background-color: #F9F9F9;">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="/">
+          <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀Planet<span class="emph">DevOps</span></h3>
+          <!--<img class="nav-logo" src="/static/images/logo.png" alt="devopsnation.io"/> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <!-- left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/tutorials/">Tutorials</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/consultation/">Consultation</a>
+            </li>
+
+          </ul>
+          <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <span class="ml-lg-auto d-none d-lg-flex">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://twitter.com/planetdevopsio"
+                  data-a-social-outbound="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/planetdevopsio"
+                  data-a-social-outbound="GitHub"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/feeds/"><i class="fas fa-rss"></i></a>
+              </li>
+            </span>
+            
+            <li class="nav-item nav-right-btn">
+              <a
+                class="btn btn-primary" style="pointer-events: none;"
+                href="/accounts/login/?next=/"
+                data-a-nav-signin>Sign In</a>
+              <a
+                class="btn btn-brand1" style="pointer-events: none;"
+                href="/accounts/signup/?next=/"
+                data-a-nav-signup>Sign Up</a>
+            </li>
+            
+          </ul>
+
+          
+        </div>
+    </nav>
 
         <div class="container">
             <form>
                 <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Name</label>
+                    <label for="inputEmail4">Name*</label>
                     <input type="email" class="form-control" id="inputName4" placeholder="Name">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputPassword4">Email</label>
+                    <label for="inputPassword4">Email*</label>
                     <input type="password" class="form-control" id="inputPassword4" placeholder="Email">
                 </div>
                 </div>
@@ -145,7 +112,7 @@
                 </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Details</label>
+                    <label for="exampleFormControlTextarea1">Details*</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Details of required consultancy"></textarea>
                   </div>
                 <button type="submit" class="btn btn-primary">Sign in</button>

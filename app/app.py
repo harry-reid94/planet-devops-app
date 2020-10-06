@@ -74,5 +74,5 @@ def tutorial_create():
 def consultation():
     return render_template('consultation.html')
 
-app.run()
+app.run(host='0.0.0.0', port='5000')
 # %%

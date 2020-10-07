@@ -15,6 +15,7 @@ EXPOSE 5000
 EXPOSE 5001
 RUN pip3 install -r ./planet-devops-app/app/requirements.txt
 
+CMD python3 ./planet-devops-app/app/app.py
 
 #To Push to Docker Hub
 #docker login --username username

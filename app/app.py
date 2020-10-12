@@ -70,6 +70,10 @@ def tutorial_create():
             
     return render_template('tutorial-create.html', form = form)
 
+@app.route('/blog/', methods=['GET', 'POST'])
+def blog():
+    return render_template('blog.html')
+
 @app.route('/consultation/')
 def consultation():
     return render_template('consultation.html')

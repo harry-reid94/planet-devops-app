@@ -10,6 +10,9 @@
    font-weight: bolder !important;
  }
 
+ .centered{
+   text-align: center;
+ }
  .home-buttons-row{
   font-weight: bolder !important;
  }

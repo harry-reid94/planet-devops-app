@@ -68,6 +68,9 @@
   width: 250px !important;
   padding-right: 15px;
   margin-right: 15px;
+  border-radius: 5px;
+  border-color: rgb(226, 226, 226);
+  border-width: 0.5px;
 }
  .home-background-image{
    background: url(/static/images/space.png) no-repeat center center fixed;

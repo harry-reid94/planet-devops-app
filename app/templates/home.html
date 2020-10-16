@@ -21,9 +21,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     </head>
-    <script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"66ed0d54cbee48a8",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>    <body style="background-color: #F9F9F9;">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="/home">
               <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀planet<span class="lightest-blue">DevOps</span></h3>
               <!--<img class="nav-logo" src="/static/images/logo.png" alt="devopsnation.io"/> -->
             </a>
@@ -44,7 +43,7 @@
                   <a class="nav-link" href="/devops/">What is DevOps?</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/consultation/">Write for Us</a>
+                  <a class="nav-link" href="/writeforus/">Write for Us</a>
                 </li>
 
               </ul>
@@ -54,24 +53,28 @@
                     <a class="nav-link" href="https://twitter.com/planetdevopsio"><i class="fab fa-twitter"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://slack.com/planetdevopsio"><i class="fab fa-slack"></i></a>
+                    <a class="nav-link" href="https://planetdevopsio.slack.com"><i class="fab fa-slack"></i></a>
                   </li>
+                  <!--
                   <li class="nav-item">
                     <a class="nav-link" href="https://www.facebook.com/PlanetDevops-108065184396117"><i class="fab fa-facebook"></i></a>
                   </li>
+                  -->
                   <li class="nav-item">
-                    <a class="nav-link" href="https://linkedin.com/planetdevops"><i class="fab fa-linkedin"></i></a>
+                    <a class="nav-link" href="https://linkedin.com/company/planetdevops-io"><i class="fab fa-linkedin"></i></a>
                   </li>
                   <li class="nav-item" style="padding-right: 20px;">
-                    <a class="nav-link" href="https://github.com/planetdevopsio"><i class="fab fa-github"></i></a>
+                    <a class="nav-link" href="https://github.com/harry-reid94/"><i class="fab fa-github"></i></a>
                   </li>
                 </span>
                 
+                <!--
                 <li class="nav-item nav-right-btn">
                   <a
                     class="btn btn-danger" style="pointer-events: none; background-color: rgb(144, 55, 73); border-color: rgb(144, 55, 73);"
                     href="/">Sign In</a>
                 </li>
+                -->
                 
               </ul>
 
@@ -88,7 +91,7 @@
                 <div class="home-actions">
                   <br>
                   <a href="/tutorials/" class="btn btn-outline-light bolder btn-padding pad-right">View Tutorials</a>
-                  <a href="/articles/" class="lightest-blue-link bolder underline">Read about DevOps  ></a>
+                  <a href="/blog/" class="lightest-blue-link bolder underline">Read about DevOps  ></a>
                 </div>
             </div>
             </div>
@@ -102,7 +105,7 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
-                  <p class="card-text">Planet DevOps offers a wide range of free tutorials, from installing and configuring Docker, to running your first serverless Flask application.</p>
+                  <p class="card-text">planetDevOps offers a wide range of free tutorials, from installing and configuring Docker, to running your first serverless Flask application.</p>
                   <a href="/tutorials/" class="btn btn-outline-dark">View Tutorials | 🚀</a>
                 </div>
               </div>
@@ -116,7 +119,7 @@
                   <h5 class="card-title"></h5>
                   <p class="card-text">"Tell them what you are going to tell them, tell them, then tell them what you told them." - Aristotle</p>
                   <br>
-                  <a href="/articles/" class="btn btn-outline-dark">Visit Blog | 🚀</a>
+                  <a href="/blog/" class="btn btn-outline-dark">Visit Blog | 🚀</a>
                 </div>
               </div>
             </div>
@@ -127,8 +130,8 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
-                  <p class="card-text">If you feel you have some insight to offer the world, whether that be in the form of blog post or tutorial guides, why not use planetDevOps as your platform!</p>
-                  <a href="/consultation/" class="btn btn-outline-dark">More Info | 🚀</a>
+                  <p class="card-text">If you've got some insight to offer the world, whether that be in the form of blog posts or tutorial guides, why not use planetDevOps as your platform!</p>
+                  <a href="/writeforus/" class="btn btn-outline-dark">More Info | 🚀</a>
                 </div>
               </div>
             </div>
@@ -211,11 +214,13 @@
                     <h2 style="text-align: center;">Stay Up-to-Date!</h2>
                     <p style="text-align: center;">Join our mailing list to be notified about new tutorials, articles and more.</p>
                   </header>
+                  <form  method="post">
                   <div class="d-flex justify-content-center">
-                      <input placeholder="Enter your email" class="form-control subscribe-input">
+                      {{form.email}}
                       <button class="btn btn-success" type="submit">Subscribe</button>
+                    </form>
                     </div>
-                </div>
+                  </div>
               </div>
             </div>
               <footer class="footer text-center">
@@ -223,7 +228,7 @@
                   <hr>
                   <small>
                     <p>
-                      <span>&copy; Copyright 2020 - PlanetDevOps</span>.
+                      <span>&copy; Copyright 2020 - planetDevOps</span>.
                       <br>
                       <span>Developed by </span>
                       <a href="https://www.linkedin.com/in/hreid08/">Harry Reid</a>.
@@ -231,8 +236,60 @@
                   </small>
     
               </footer>
-          
-              
+
+              <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                  'use strict';
+                  window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                      form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                      }, false);
+                    });
+                  }, false);
+                })();
+                </script>
+
+              <div class="modal" id="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                <script>
+
+                  function getInputValue(){
+                  // Selecting the input element and get its value 
+                  var inputVal = document.getElementById("subscriber").value;
+                  
+                  // Displaying the value
+                  alert(inputVal);
+                  }
+                  
+                  </script>
+
           
               <!-- JavaScript -->
               <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

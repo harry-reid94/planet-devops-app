@@ -22,7 +22,7 @@
     </head>
     <body style="background-color: #F9F9F9;">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/home">
           <h3 style="color: white; border-top: 0px; margin: 0px; padding: none">🚀planet<span class="lightest-blue">DevOps</span></h3>
           <!--<img class="nav-logo" src="/static/images/logo.png" alt="devopsnation.io"/> -->
         </a>
@@ -43,7 +43,7 @@
               <a class="nav-link" href="/devops/">What is DevOps?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/consultation/">Write for us</a>
+              <a class="nav-link" href="/writeforus/">Write for Us</a>
             </li>
 
           </ul>
@@ -53,24 +53,28 @@
                 <a class="nav-link" href="https://twitter.com/planetdevopsio"><i class="fab fa-twitter"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://slack.com/planetdevopsio"><i class="fab fa-slack"></i></a>
+                <a class="nav-link" href="https://planetdevopsio.slack.com"><i class="fab fa-slack"></i></a>
               </li>
+              <!--
               <li class="nav-item">
                 <a class="nav-link" href="https://www.facebook.com/PlanetDevops-108065184396117"><i class="fab fa-facebook"></i></a>
               </li>
+              -->
               <li class="nav-item">
-                <a class="nav-link" href="https://linkedin.com/planetdevops"><i class="fab fa-linkedin"></i></a>
+                <a class="nav-link" href="https://linkedin.com/company/planetdevops-io"><i class="fab fa-linkedin"></i></a>
               </li>
               <li class="nav-item" style="padding-right: 20px;">
-                <a class="nav-link" href="https://github.com/planetdevopsio"><i class="fab fa-github"></i></a>
+                <a class="nav-link" href="https://github.com/harry-reid94/"><i class="fab fa-github"></i></a>
               </li>
             </span>
             
+            <!--
             <li class="nav-item nav-right-btn">
               <a
                 class="btn btn-danger" style="pointer-events: none; background-color: rgb(144, 55, 73); border-color: rgb(144, 55, 73);"
                 href="/">Sign In</a>
             </li>
+            -->
             
           </ul>
 
@@ -81,34 +85,34 @@
         <div class="container">
           <br>
           <br>
-            <form>
+            <form method="post">
                 <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Name*</label>
-                    <input type="email" class="form-control" id="inputName4" placeholder="Name">
+                    {{form.name}}
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Email*</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Email">
+                    {{form.email}}
                 </div>
                 </div>
                 <div class="form-group">
                 <label for="inputAddress2">Phone Number</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Phone Number">
+                {{form.phone}}
                 </div>
                 <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    {{form.city}}
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputCity">Postcode/Zip</label>
-                    <input type="text" class="form-control" id="Postcode/Zip" placeholder="Postcode/Zip">
+                    {{form.postcode}}
                 </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Details*</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Details"></textarea>
+                    {{form.details}}
                   </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

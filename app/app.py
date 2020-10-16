@@ -14,7 +14,7 @@ app.config["DEBUG"] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testDB.db'
 db = SQLAlchemy(app)
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     form = SubscriberForm(request.form)
     if request.method == 'POST':
@@ -134,7 +134,7 @@ def writeforus():
         with open('writers.json', 'w') as outfile:
             json.dump(data, outfile)
 
-        return redirect('/home')
+        return redirect('/')
 
     return render_template('writeforus.html', form=form)
 

@@ -24,7 +24,20 @@ def home():
         file_object = open('subscribers.txt', 'a')
         file_object.write(subscriber + '\n')
         form.email.data = ""
+        return redirect('/success')
     return render_template('home.html', form=form)
+
+@app.route('/success', methods=['GET', 'POST'])
+def success():
+    form = SubscriberForm(request.form)
+    if request.method == 'POST':
+        print("OK")
+        subscriber = form.email.data 
+        print(subscriber)
+        file_object = open('subscribers.txt', 'a')
+        file_object.write(subscriber + '\n')
+        form.email.data = ""
+    return render_template('success.html', form=form)
 
 @app.route('/tutorials/')
 def tutorials():

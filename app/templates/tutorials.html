@@ -136,16 +136,15 @@
 
 {% for tutorial in tutorial %}
 {{loop.index}}
-  <script>
+<script>  
   console.log("Hello!");
   var tag = "";
   var title = "";
   var date = "";
-  var count = 0;
 
   var html1 = "";
   var html2 = "";
-  var count = '{{loop.index}}';
+  var count = '{{loop.index}}' - 1;
   var wideimg = '{{tutorial.wide_img}}';
   var imgclass = "";
   if(wideimg == 1){
@@ -155,9 +154,35 @@
     imgclass = "tutorial-images";
   };
 
+
+
   
       if('{{tutorial.tag}}' != ''){
-            html = '<div class="card" style="display: inline-block; width: 30.5%; margin: 10px;">' +
+        if(count % 3 == 0 || count == 0){
+            html =  '<div class="row" id=row{{loop.index}} style="padding-bottom: 15px; height: 400px">' +
+                      '<div class="col-sm-4">' +
+                        '<div class="card">' +
+                            '<div class="card-body text-center">' +
+                              '<img class=' + imgclass + ' src="/static/images/tutorial-images/{{tutorial.tag}}/{{tutorial.tag}}.png"/>' +
+                              '<br>' +
+                              '<br>' +
+                              '<h4>' + '{{tutorial.title}}' + '</h4>' +
+                              '<p>Harry Reid | ' + '{{tutorial.created_date}}' + '</p>' +
+                              '<div class="dot">' +
+                                '<div style="padding-top: 5px; color: white;">' +
+                                '<a style="color: var(--brand4);" href="/tutorial-template/{{tutorial.tag}}">Go</a>' +
+                              '</div>' +
+                            '</div>' +
+                            '</div>' +
+                          '</div>' +
+                      '</div>';
+                       
+            $('#content').append(html);
+            var row = '{{loop.index}}'
+        }
+        else{
+          html = '<div class="col-sm-4">' +
+                      '<div class="card">' +
                           '<div class="card-body text-center">' +
                             '<img class=' + imgclass + ' src="/static/images/tutorial-images/{{tutorial.tag}}/{{tutorial.tag}}.png"/>' +
                             '<br>' +
@@ -170,9 +195,12 @@
                             '</div>' +
                           '</div>' +
                           '</div>' +
-                        '</div>';
+                        '</div>' +
+                    '</div>';
+          $('#row' + row).append(html);
+        };
     };
-      $('#content').append(html);
+     
 
  
   </script>

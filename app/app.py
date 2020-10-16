@@ -100,26 +100,42 @@ def tutorial_edit(tag):
     title = tutorial.title
     tag = tutorial.tag
     content = tutorial.content
+    success = False
 
+    if request.method == 'POST':
 
-    if form.validate and request.method == 'POST':
-        tutorial.tag = form.tag.data
-        tutorial.title = form.title.data
-        print(form.title.data)
-        tutorial.content = form.content.data
-        
-        try:
-            db.session.commit()
-            success=True
-            return redirect('/tutorials')
-        except Exception as e:
-            print(e)
-            #log your exception in the way you want -> log to file, log as error with default logging, send by email. It's upon you
-            db.session.rollback()
-            db.session.flush() # for resetting non-commited .add()
-        
+        if 'delete_button' in request.form:
+            print("gets here")
+
+            try:
+                db.session.query(TutorialModel).filter_by(tag=tag).delete()
+                db.session.commit()
+                success=True
+                return redirect('/tutorials')
+            except Exception as e:
+                print(e)
+                #log your exception in the way you want -> log to file, log as error with default logging, send by email. It's upon you
+                db.session.rollback()
+                db.session.flush() # for resetting non-commited .add()
+
+        elif form.validate:
+            tutorial.tag = form.tag.data
+            tutorial.title = form.title.data
+            print(form.title.data)
+            tutorial.content = form.content.data
+            
+            try:
+                db.session.commit()
+                success=True
+                return redirect('/tutorials')
+            except Exception as e:
+                print(e)
+                #log your exception in the way you want -> log to file, log as error with default logging, send by email. It's upon you
+                db.session.rollback()
+                db.session.flush() # for resetting non-commited .add()
+
         print(success)
-
+            
     return render_template('tutorial-edit.html', form = form, title = title, tag = tag, content = content)
 
 

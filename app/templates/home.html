@@ -109,7 +109,19 @@
                 </div>
             </div>
             </div>
-        </header>       
+        </header>  
+        {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                {{message}}
+                </div>
+              {% endfor %}
+              {% endif %}
+            {% endwith %}
+            
+            {% block body %}{% endblock %}     
            
           <div class="row" style="padding: 40px;">
             <div class="col">
@@ -271,27 +283,7 @@
                   }, false);
                 })();
                 </script>
-
-              <div class="modal" id="modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <p>Modal body text goes here.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+                
                 <script>
 
                   function getInputValue(){
@@ -301,7 +293,6 @@
                   // Displaying the value
                   alert(inputVal);
                   }
-                  
                   </script>
 
           

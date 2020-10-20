@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, flash, render_template, request, redirect, url_for
 from model_subscriber import SubscriberForm
 from model_writer import WriterForm
 from model_tutorial import TutorialForm, TutorialModel
@@ -10,6 +10,7 @@ import json
 
 
 app = Flask(__name__)
+app.secret_key = b']@V\xc6\x99\xf2?c\x99\xa6\xad3\x13\xa2\tf\x14I\xf0\x9a\xe1\x15\xceV'
 app.config["DEBUG"] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testDB.db'
 db = SQLAlchemy(app)
@@ -24,20 +25,9 @@ def home():
         file_object = open('subscribers.txt', 'a')
         file_object.write(subscriber + '\n')
         form.email.data = ""
-        return redirect('/success')
+        flash('You were successfully added to our subscriber list!')
+        return redirect('/')
     return render_template('home.html', form=form)
-
-@app.route('/success', methods=['GET', 'POST'])
-def success():
-    form = SubscriberForm(request.form)
-    if request.method == 'POST':
-        print("OK")
-        subscriber = form.email.data 
-        print(subscriber)
-        file_object = open('subscribers.txt', 'a')
-        file_object.write(subscriber + '\n')
-        form.email.data = ""
-    return render_template('success.html', form=form)
 
 @app.route('/tutorials/')
 def tutorials():
@@ -163,6 +153,7 @@ def writeforus():
         with open('writers.json', 'w') as outfile:
             json.dump(data, outfile)
 
+        flash("Thanks! We'll be in touch.")
         return redirect('/')
 
     return render_template('writeforus.html', form=form)

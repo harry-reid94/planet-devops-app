@@ -16,7 +16,8 @@ ADD http://worldtimeapi.org/api/ip /time.tmp
 RUN git clone https://github.com/harry-reid94/planet-devops-app.git ./planet-devops-app
 RUN pip3 install -r ./planet-devops-app/app/requirements.txt
 
-CMD python3 ./planet-devops-app/app/app.py
+WORKDIR /planet-devops-app/app
+CMD python3 app.py
 
 #To Push to Docker Hub
 #docker login --username username

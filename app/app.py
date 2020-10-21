@@ -22,7 +22,7 @@ def home():
         print("OK")
         subscriber = form.email.data 
         print(subscriber)
-        file_object = open('./subscribers/subscribers.txt', 'a')
+        file_object = open('/planet-devops-app/app/subscribers/subscribers.txt', 'a')
         file_object.write(subscriber + '\n')
         form.email.data = ""
         flash('You were successfully added to our subscriber list!')
@@ -150,7 +150,7 @@ def writeforus():
             'phone': form.phone.data,
             'details': form.details.data
         })
-        with open('./writers/writers.json', 'w') as outfile:
+        with open('/planet-devops-app/app/writers/writers.json', 'w') as outfile:
             json.dump(data, outfile)
 
         flash("Thanks! We'll be in touch.")

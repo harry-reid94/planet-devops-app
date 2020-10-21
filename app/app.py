@@ -150,7 +150,7 @@ def writeforus():
             'phone': form.phone.data,
             'details': form.details.data
         })
-        with open('writers.json', 'w') as outfile:
+        with open('./writers/writers.json', 'w') as outfile:
             json.dump(data, outfile)
 
         flash("Thanks! We'll be in touch.")

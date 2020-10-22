@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" style="overflow-y: scroll; overflow-x: hidden;">
     <head>
+      <title>{{tutorial.title}}</title>
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180738263-1"></script>
       <script>
@@ -147,27 +148,20 @@
              <div class="col-1" style="padding-top: 10px; position:sticky">
                <ul class="social-media-ul" style="position:sticky; position: -webkit-sticky; top: 90px">
                  <li class="social-media-li">
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.planetdevops.io&title=&summary=Check out this tutorial on planetDevOps.io!www.planetdevops.io/{{tutorial.tag}}/&source=">
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.planetdevops.io&title=&summary=Check out this tutorial on planetDevOps.io!www.planetdevops.io/tutorial-template/{{tutorial.tag}}/&source=">
                     <img class="social-media-logos" src="/static/images/social-media/linkedin.png"/>
                   </a>
                  </li>
                  <li class="social-media-li">
-                  <a href="https://twitter.com/home?status=https://www.planetdevops.io Check out this tutorial on planetDevOps.io!www.planetdevops.io/{{tutorial.tag}}">
+                  <a href="https://twitter.com/home?status=https://www.planetdevops.io Check out this tutorial on planetDevOps.io!www.planetdevops.io/tutorial-template/{{tutorial.tag}}">
                     <img class="social-media-logos" src="/static/images/social-media/twitter.png"/>
                   </a>
                  </li>
                  <li class="social-media-li">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.planetdevops.io/{{tutorial.tag}}">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.planetdevops.io/tutorial-template/{{tutorial.tag}}">
                     <img class="social-media-logos" src="/static/images/social-media/fb.png"/>
                   </a>
                  </li>
-                 <!--
-                 <li class="social-media-li">
-                  <a href="https://github.com/">
-                    <img class="social-media-logos" src="/static/images/social-media/slack.png"/>
-                  </a>
-                 </li>
-                 -->
                </ul>
              </div>
 
@@ -176,16 +170,6 @@
          
         
       </div>
-      <div id="test"></div>
-
-
-      
-
-
-        
-
-        <!-- Footer -->
-              
         <footer class="footer text-center">
           <div class="container">
             <hr>
@@ -202,48 +186,6 @@
 
         <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
 
-          
-          <style>
-              nav[data-toggle="toc"] {
-  top: 42px;
-}
-
-/* small screens */
-@media (max-width: 768px) {
-  /* override stickyness so that the navigation does not follow scrolling */
-  nav[data-toggle="toc"] {
-    margin-bottom: 42px;
-    position: static;
-  }
-
-  /* PICK ONE */
-  /* don't expand nested items, which pushes down the rest of the page when navigating */
-  nav[data-toggle="toc"] .nav .active .nav {
-    display: none;
-  }
-  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
-  /*
-  nav[data-toggle='toc'] .nav .nav {
-    display: block;
-  }
-  */
-}
-
-          </style>
-
-<script>
-  
-		
-  $(function() {
-			
-      $('article').readingTime({
-        wordCountTarget: '.words',
-      });
-      
-    });
-  
-  
-</script>
 <script>
  
 

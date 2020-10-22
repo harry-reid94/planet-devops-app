@@ -19,6 +19,7 @@ django-filter==2.2.0
 djangorestframework==3.11.0
 Flask==1.1.1
 Flask-Babel==0.12.2
+Flask-Caching
 Flask-Login==0.5.0
 Flask-Migrate==2.5.2
 flask-paginate==0.6.0

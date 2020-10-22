@@ -6,16 +6,26 @@ from flask_sqlalchemy import SQLAlchemy
 from IPython.display import display, HTML
 from datetime import date
 import json
+from flask_caching import Cache
 
-
+config = {
+    "DEBUG": True,          # some Flask specific configs
+    "CACHE_TYPE": "simple", # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
 
 app = Flask(__name__)
+
+#for subscriber/writer flash - session
 app.secret_key = b']@V\xc6\x99\xf2?c\x99\xa6\xad3\x13\xa2\tf\x14I\xf0\x9a\xe1\x15\xceV'
-app.config["DEBUG"] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testDB.db'
 db = SQLAlchemy(app)
 
+app.config.from_mapping(config)
+cache = Cache(app)
+
 @app.route('/', methods=['GET', 'POST'])
+@cache.cached(timeout=50)
 def home():
     form = SubscriberForm(request.form)
     if request.method == 'POST':
@@ -30,6 +40,7 @@ def home():
     return render_template('home.html', form=form)
 
 @app.route('/tutorials/')
+@cache.cached(timeout=50)
 def tutorials():
     tutorial = TutorialModel.query.all()
     #print(type(tutorial))
@@ -37,6 +48,7 @@ def tutorials():
     return render_template('tutorials.html', tutorial=tutorial)
 
 @app.route('/tutorial-template/<tag>', methods=['GET', 'POST'])
+@cache.cached(timeout=50)
 def tutorial_template(tag):
     #tutorial = TutorialModel.query.all()
     tutorial = TutorialModel.query.filter_by(tag=tag).first()
@@ -130,14 +142,17 @@ def tutorial_edit(tag):
 
 
 @app.route('/blog/', methods=['GET', 'POST'])
+@cache.cached(timeout=50)
 def blog():
     return render_template('blog.html')
 
 @app.route('/devops/', methods=['GET', 'POST'])
+@cache.cached(timeout=50)
 def devops():
     return render_template('devops.html')
 
 @app.route('/writeforus/', methods=['GET', 'POST'])
+@cache.cached(timeout=50)
 def writeforus():
     form = WriterForm(request.form)
     if request.method == 'POST':

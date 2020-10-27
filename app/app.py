@@ -125,6 +125,7 @@ def tutorial_edit(tag):
             tutorial.title = form.title.data
             print(form.title.data)
             tutorial.content = form.content.data
+            tutorial.created_date = date.today()
             
             try:
                 db.session.commit()
